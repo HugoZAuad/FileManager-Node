@@ -1,8 +1,10 @@
-const fileManager = require("./fileManager");
-const readlineSync = require("readline-sync");
-const path = require("path");
+import fileManager from "./fileManager.js";
+import readlineSync from "readline-sync";
+import path from "path";
+import url, { fileURLToPath } from "url";
 
 async function main() {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url))
   const baseDir = path.join(__dirname, "my_files");
 
   fileManager.createDirectory(baseDir);
@@ -55,7 +57,7 @@ async function main() {
             writeFilePath,
             newContent
           );
-          console.log(messageWrite);
+          console.log(messageWriteimport);
           break;
         case "5":
           const deleteFileName = readlineSync.question(
