@@ -17,7 +17,7 @@ async function main() {
     console.log("5. Deletar arquivo");
     console.log("6. Sair");
 
-    const choice = readlineSync.question("Escolha uma opção: ");
+    const choice = readlineSync.question("Escolha uma opcao: ");
 
     try {
       switch (choice) {
